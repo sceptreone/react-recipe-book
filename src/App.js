@@ -5,6 +5,7 @@ import About from './componets/pages/About';
 import Page404 from './componets/pages/Page404';
 
 import Recipes from './componets/recipes/Recipes'
+import AddRecipe from './componets/recipes/AddRecipe'
 
 import { Provider } from './context';
 
@@ -19,6 +20,7 @@ function App() {
         <div className='App'>
           <Header branding="Recipe Book" />
           <div className="container">
+            <AddRecipe />
             <Recipes />
           </div>
         </div>
