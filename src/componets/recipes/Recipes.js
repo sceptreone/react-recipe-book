@@ -11,6 +11,7 @@ class Recipes extends Component {
                     const { recipes } = value;
                     return (
                         <React.Fragment>
+                            <h1 className="display-4 mb-2"><span className="text-info">Recipe Book</span></h1>
                             {recipes.map(recipe => 
                                 <Recipe key={recipe.id} recipe={recipe}/>
                             )}

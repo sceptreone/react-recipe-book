@@ -20,8 +20,12 @@ function App() {
         <div className='App'>
           <Header branding="Recipe Book" />
           <div className="container">
-            <AddRecipe />
-            <Recipes />
+            <Switch>
+              <Route exact path="/" component={Recipes} />
+              <Route exact path="/recipe/add" component={AddRecipe} />
+              <Route exact path="/about" component={About} />
+              <Route component={Page404} />
+            </Switch>
           </div>
         </div>
       </Router>
