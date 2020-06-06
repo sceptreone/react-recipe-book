@@ -4,23 +4,26 @@ import Header from './componets/layout/Header';
 import About from './componets/pages/About';
 import Page404 from './componets/pages/Page404';
 
+import Recipes from './componets/recipes/Recipes'
+
+import { Provider } from './context';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 import './App.css';
 
 function App() {
   return (
-   <Router>
-     <div className='App'>
-       <Header branding="Recipe Book" />
-       <div className="container">
-         <Switch>
-           <Route exact path="/" />
-           <Route exact path="/about" component={About} />
-           <Route component={Page404} />
-         </Switch>
-       </div>
-     </div>
-   </Router>
+    <Provider>
+      <Router>
+        <div className='App'>
+          <Header branding="Recipe Book" />
+          <div className="container">
+            <Recipes />
+          </div>
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
